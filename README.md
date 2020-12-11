@@ -1,5 +1,7 @@
 # CS1-2-Graph-Project
 
+![Demo](./Demo.png)
+
 ### Course Scheduler
 
 Credit for the inspiration of this project goes to Sergey Karayev from Gradescope

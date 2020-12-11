@@ -26,7 +26,16 @@ def jsonToGraph(filepath):
 
 graph = Graph()
 jsonToGraph('courses.json')
-result = graph.numPrereqs("FEW 2.3")
-for course in result:
-    print(course.data)
-print(len(result)-1)
+
+
+def printSchedule(filepath):
+    json_data = readin_data(filepath)
+    for course in json_data:
+        print(f"-------{course['name']}-------")
+        result = graph.numPrereqs(course["name"])
+        for course in result:
+            print(f"{course.data:>20}")
+        print(f"\nprerequisites: {len(result)-1}")
+
+
+printSchedule('courses.json')
